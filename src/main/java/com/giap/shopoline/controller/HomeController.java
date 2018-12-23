@@ -16,7 +16,7 @@ public class HomeController {
     @RequestMapping(method = RequestMethod.GET)
     public String Index(Map<String, Object> model) {
         model.put("message", this.message);
-        return "layout";
+        return "home";
     }
     //chitietsanpham
     @RequestMapping(value ={"/Detail/{id}","/ChiTiet/{id}"},method = RequestMethod.GET)

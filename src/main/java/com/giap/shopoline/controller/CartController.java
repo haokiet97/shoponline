@@ -44,7 +44,7 @@ public class CartController {
     @RequestMapping(value = {"/Payment","/ThanhToan"},method = RequestMethod.GET)
     public String viewPayment(){
 
-        return "redirect:/Index";
+        return "payment";
     }
 
     @RequestMapping(value = {"/Payment","/ThanhToan"},method = RequestMethod.POST)
