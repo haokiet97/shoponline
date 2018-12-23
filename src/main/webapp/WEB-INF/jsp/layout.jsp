@@ -133,7 +133,7 @@
         </div>
     </div><!--/header-bottom-->
 </header><!--/header-->
-
+<%--render body--%>
 <tiles:insertAttribute name="content" />
 
 <br/>

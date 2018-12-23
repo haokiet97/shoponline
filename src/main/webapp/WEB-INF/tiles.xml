@@ -12,5 +12,8 @@
     <definition name="payment" extends="baselayout">
         <put-attribute name="content" value="/WEB-INF/jsp/payment.jsp" />
     </definition>
+    <definition name="notice" extends="baselayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/notice.jsp" />
+    </definition>
 
 </tiles-definitions>

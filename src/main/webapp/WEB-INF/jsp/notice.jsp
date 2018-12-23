@@ -7,7 +7,7 @@
 
     <div class="container">
         <div class="breadcrumbs">
-            <h3>@ViewBag.Note</h3>
+            <h3>@{notice}</h3>
             <p>Giỏ hàng của bạn đang trống!</p>
             <ol class="breadcrumb">
                 <li><a href="/Home/Index">Trang Chủ</a></li>
