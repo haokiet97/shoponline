@@ -86,7 +86,7 @@
 <section class="container">
     <br />
     <div class="row">
-        <!--category-->
+        <!--_category.jsp-->
         <tiles:insertAttribute name="category" />
         <!--main-->
         <div class="col-sm-9 padding-right">
@@ -137,7 +137,7 @@
             @Html.PagedListPager(Model, page => Url.Action("Index", new { page }))
 
             <div class="category-tab">
-                <!--category-tab-->
+                <!--_category.jsp-tab-->
                 <div class="col-sm-12">
                     <ul class="nav nav-tabs">
 

@@ -4,7 +4,7 @@
         <put-attribute name="content" value="" />
     </definition>
     <definition name="home" extends="baselayout">
-        <put-attribute name="content" value="/WEB-INF/jsp/cart.jsp" />
+        <put-attribute name="content" value="index" />
     </definition>
     <definition name="cart" extends="baselayout">
         <put-attribute name="content" value="/WEB-INF/jsp/cart.jsp" />
@@ -15,5 +15,12 @@
     <definition name="notice" extends="baselayout">
         <put-attribute name="content" value="/WEB-INF/jsp/notice.jsp" />
     </definition>
+    <definition name="index" template="/WEB-INF/jsp/index.jsp">
+        <put-attribute name="category" value="/WEB-INF/jsp/_category.jsp" />
+    </definition>
+    <definition name="test" extends="baselayout">
+        <put-attribute name="content" value="/WEB-INF/jsp/payment.jsp" />
+    </definition>
+
 
 </tiles-definitions>

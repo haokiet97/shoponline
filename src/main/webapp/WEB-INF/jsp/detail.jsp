@@ -172,7 +172,7 @@
         </div><!--/product-details-->
 
         <div class="category-tab shop-details-tab">
-            <!--category-tab-->
+            <!--_category.jsp-tab-->
             <div class="col-sm-12">
                 <ul class="nav nav-tabs">
                     <li class="active"><a href="#details" data-toggle="tab">Chi Tiết</a></li>
@@ -249,7 +249,7 @@
                 </div>
 
             </div>
-        </div><!--/category-tab-->
+        </div><!--/_category.jsp-tab-->
 
         <div class="recommended_items">
             <!--recommended_items-->
