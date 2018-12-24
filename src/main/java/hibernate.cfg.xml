@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.url">jdbc:jtds:sqlserver://127.0.0.1:1433/QuanLiDT;instance=SQLEXPRESS</property>
+        <property name="connection.driver_class">net.sourceforge.jtds.jdbc.Driver</property>
+        <mapping class="com.giap.shopoline.models.TblAlbumAnhEntity"/>
+        <mapping class="com.giap.shopoline.models.TblAnhEntity"/>
+        <mapping class="com.giap.shopoline.models.TblBinhluanEntity"/>
+        <mapping class="com.giap.shopoline.models.TblChitietdonhangEntity"/>
+        <mapping class="com.giap.shopoline.models.TblDanhmucEntity"/>
+        <mapping class="com.giap.shopoline.models.TblDondathangEntity"/>
+        <mapping class="com.giap.shopoline.models.TblKhachhangEntity"/>
+        <mapping class="com.giap.shopoline.models.TblNhanvienEntity"/>
+        <mapping class="com.giap.shopoline.models.TblNhasanxuatEntity"/>
+        <mapping class="com.giap.shopoline.models.TblQuyenEntity"/>
+        <mapping class="com.giap.shopoline.models.TblSanphamEntity"/>
+        <mapping class="com.giap.shopoline.models.TblTaikhoanEntity"/>
+        <!-- <property name="connection.username"/> -->
+        <!-- <property name="connection.password"/> -->
+
+        <!-- DB schema will be updated if needed -->
+        <!-- <property name="hbm2ddl.auto">update</property> -->
+    </session-factory>
+</hibernate-configuration>
