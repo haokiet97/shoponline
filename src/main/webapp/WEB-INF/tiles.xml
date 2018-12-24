@@ -18,8 +18,15 @@
     <definition name="index" template="/WEB-INF/jsp/index.jsp">
         <put-attribute name="category" value="/WEB-INF/jsp/_category.jsp" />
     </definition>
-    <definition name="test" extends="baselayout">
-        <put-attribute name="content" value="/WEB-INF/jsp/payment.jsp" />
+    <definition name="products" template="/WEB-INF/jsp/products.jsp">
+        <put-attribute name="category" value="/WEB-INF/jsp/_category.jsp"/>
+    </definition>
+    <!--view list product in category or producer-->
+    <definition name="products_in_category" extends="baselayout">
+        <put-attribute name="content" value="products"/>
+    </definition>
+    <definition name="products_in_producer" extends="baselayout">
+        <put-attribute name="content" value="products"/>
     </definition>
 
 

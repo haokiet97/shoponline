@@ -1,7 +1,14 @@
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+
+
 <section class="container">
     <br/>
     <div class="row">
-        @{Html.RenderAction("CategoryProduct", "Category"); }
+        <!--_category.jsp-->
+        <tiles:insertAttribute name="category"/>
         <div class="col-sm-9 padding-right">
             <div class="features_items">
                 <h2 class="title text-center">@ViewBag.Note</h2>
