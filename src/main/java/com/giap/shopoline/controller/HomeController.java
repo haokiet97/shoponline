@@ -45,6 +45,6 @@ public class HomeController {
     public String Search(Map<String, Object> model) {
 
         model.put("message", this.message);
-        return "welcome";
+        return "search";
     }
 }
