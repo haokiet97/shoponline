@@ -21,6 +21,9 @@
     <definition name="products" template="/WEB-INF/jsp/products.jsp">
         <put-attribute name="category" value="/WEB-INF/jsp/_category.jsp"/>
     </definition>
+    <definition name="search" template="/WEB-INF/jsp/search.jsp">
+        <put-attribute name="category" value="/WEB-INF/jsp/_category.jsp"/>
+    </definition>
     <!--view list product in category or producer-->
     <definition name="products_in_category" extends="baselayout">
         <put-attribute name="content" value="products"/>

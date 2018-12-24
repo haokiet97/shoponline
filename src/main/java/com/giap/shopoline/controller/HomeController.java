@@ -30,7 +30,7 @@ public class HomeController {
     public String Producer(Map<String, Object> model) {
 
         model.put("message", this.message);
-        return "welcome";
+        return "products_in_producer";
     }
 
     //san pham theo danh muc
