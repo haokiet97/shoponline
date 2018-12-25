@@ -1,53 +1,51 @@
 package com.giap.shopoline.services;
 
-import com.giap.shopoline.dao.AnhDao;
-import com.giap.shopoline.models.TblAnhEntity;
+import com.giap.shopoline.dao.BinhluanDao;
+import com.giap.shopoline.models.TblBinhluanEntity;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
-public class AnhService {
+public class BinhluanService {
     @Autowired
-    private static AnhDao dao;
+    private static BinhluanDao dao;
 
-    public AnhService() {
-        dao = new AnhDao();
+    public BinhluanService() {
+        dao = new BinhluanDao();
     }
 
-    public void persist(TblAnhEntity entity) {
+    public void persist(TblBinhluanEntity entity) {
         dao.openCurrentSessionwithTransaction();
         dao.persist(entity);
         dao.closeCurrentSessionwithTransaction();
     }
 
-    public void update(TblAnhEntity entity) {
+    public void update(TblBinhluanEntity entity) {
         dao.openCurrentSessionwithTransaction();
         dao.update(entity);
         dao.closeCurrentSessionwithTransaction();
     }
 
 
-    public TblAnhEntity findById(String id) {
+    public TblBinhluanEntity findById(String id) {
         dao.openCurrentSession();
-        TblAnhEntity TblAnhEntity = dao.findById(id);
+        TblBinhluanEntity TblBinhluanEntity = dao.findById(id);
         dao.closeCurrentSession();
-        return TblAnhEntity;
+        return TblBinhluanEntity;
     }
 
     public void delete(String id) {
         dao.openCurrentSessionwithTransaction();
-        TblAnhEntity TblAnhEntity = dao.findById(id);
-        dao.delete(TblAnhEntity);
+        TblBinhluanEntity TblBinhluanEntity = dao.findById(id);
+        dao.delete(TblBinhluanEntity);
         dao.closeCurrentSessionwithTransaction();
     }
 
-    public List<TblAnhEntity> findAll() {
+    public List<TblBinhluanEntity> findAll() {
         dao.openCurrentSession();
-        List<TblAnhEntity> TblAnhEntitys = dao.findAll();
+        List<TblBinhluanEntity> TblBinhluanEntitys = dao.findAll();
         dao.closeCurrentSession();
-        return TblAnhEntitys;
+        return TblBinhluanEntitys;
     }
 
     public void deleteAll() {
@@ -56,9 +54,8 @@ public class AnhService {
         dao.closeCurrentSessionwithTransaction();
     }
 
-    public AnhDao Anhdao() {
+    public BinhluanDao BinhluanDao() {
         return dao;
     }
-
 
 }

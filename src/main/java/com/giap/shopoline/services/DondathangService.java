@@ -1,53 +1,51 @@
 package com.giap.shopoline.services;
 
-import com.giap.shopoline.dao.AnhDao;
-import com.giap.shopoline.models.TblAnhEntity;
+import com.giap.shopoline.dao.DondathangDao;
+import com.giap.shopoline.models.TblDondathangEntity;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
-public class AnhService {
+public class DondathangService {
     @Autowired
-    private static AnhDao dao;
+    private static DondathangDao dao;
 
-    public AnhService() {
-        dao = new AnhDao();
+    public DondathangService() {
+        dao = new DondathangDao();
     }
 
-    public void persist(TblAnhEntity entity) {
+    public void persist(TblDondathangEntity entity) {
         dao.openCurrentSessionwithTransaction();
         dao.persist(entity);
         dao.closeCurrentSessionwithTransaction();
     }
 
-    public void update(TblAnhEntity entity) {
+    public void update(TblDondathangEntity entity) {
         dao.openCurrentSessionwithTransaction();
         dao.update(entity);
         dao.closeCurrentSessionwithTransaction();
     }
 
 
-    public TblAnhEntity findById(String id) {
+    public TblDondathangEntity findById(String id) {
         dao.openCurrentSession();
-        TblAnhEntity TblAnhEntity = dao.findById(id);
+        TblDondathangEntity TblDondathangEntity = dao.findById(id);
         dao.closeCurrentSession();
-        return TblAnhEntity;
+        return TblDondathangEntity;
     }
 
     public void delete(String id) {
         dao.openCurrentSessionwithTransaction();
-        TblAnhEntity TblAnhEntity = dao.findById(id);
-        dao.delete(TblAnhEntity);
+        TblDondathangEntity TblDondathangEntity = dao.findById(id);
+        dao.delete(TblDondathangEntity);
         dao.closeCurrentSessionwithTransaction();
     }
 
-    public List<TblAnhEntity> findAll() {
+    public List<TblDondathangEntity> findAll() {
         dao.openCurrentSession();
-        List<TblAnhEntity> TblAnhEntitys = dao.findAll();
+        List<TblDondathangEntity> TblDondathangEntitys = dao.findAll();
         dao.closeCurrentSession();
-        return TblAnhEntitys;
+        return TblDondathangEntitys;
     }
 
     public void deleteAll() {
@@ -56,9 +54,8 @@ public class AnhService {
         dao.closeCurrentSessionwithTransaction();
     }
 
-    public AnhDao Anhdao() {
+    public DondathangDao DondathangDao() {
         return dao;
     }
-
 
 }

@@ -1,53 +1,51 @@
 package com.giap.shopoline.services;
 
-import com.giap.shopoline.dao.AnhDao;
-import com.giap.shopoline.models.TblAnhEntity;
+import com.giap.shopoline.dao.DanhmucDao;
+import com.giap.shopoline.models.TblDanhmucEntity;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
-public class AnhService {
+public class DanhmucService {
     @Autowired
-    private static AnhDao dao;
+    private static DanhmucDao dao;
 
-    public AnhService() {
-        dao = new AnhDao();
+    public DanhmucService() {
+        dao = new DanhmucDao();
     }
 
-    public void persist(TblAnhEntity entity) {
+    public void persist(TblDanhmucEntity entity) {
         dao.openCurrentSessionwithTransaction();
         dao.persist(entity);
         dao.closeCurrentSessionwithTransaction();
     }
 
-    public void update(TblAnhEntity entity) {
+    public void update(TblDanhmucEntity entity) {
         dao.openCurrentSessionwithTransaction();
         dao.update(entity);
         dao.closeCurrentSessionwithTransaction();
     }
 
 
-    public TblAnhEntity findById(String id) {
+    public TblDanhmucEntity findById(String id) {
         dao.openCurrentSession();
-        TblAnhEntity TblAnhEntity = dao.findById(id);
+        TblDanhmucEntity TblDanhmucEntity = dao.findById(id);
         dao.closeCurrentSession();
-        return TblAnhEntity;
+        return TblDanhmucEntity;
     }
 
     public void delete(String id) {
         dao.openCurrentSessionwithTransaction();
-        TblAnhEntity TblAnhEntity = dao.findById(id);
-        dao.delete(TblAnhEntity);
+        TblDanhmucEntity TblDanhmucEntity = dao.findById(id);
+        dao.delete(TblDanhmucEntity);
         dao.closeCurrentSessionwithTransaction();
     }
 
-    public List<TblAnhEntity> findAll() {
+    public List<TblDanhmucEntity> findAll() {
         dao.openCurrentSession();
-        List<TblAnhEntity> TblAnhEntitys = dao.findAll();
+        List<TblDanhmucEntity> TblDanhmucEntitys = dao.findAll();
         dao.closeCurrentSession();
-        return TblAnhEntitys;
+        return TblDanhmucEntitys;
     }
 
     public void deleteAll() {
@@ -56,9 +54,8 @@ public class AnhService {
         dao.closeCurrentSessionwithTransaction();
     }
 
-    public AnhDao Anhdao() {
+    public DanhmucDao DanhmucDao() {
         return dao;
     }
-
 
 }
