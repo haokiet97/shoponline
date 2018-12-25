@@ -16,7 +16,7 @@ public class TblAlbumAnhEntity {
     private TblSanphamEntity tblSanphamByIdSanpham;
 
     @Id
-    @Column(name = "id", nullable = false)
+    @Column(name = "id")
     public int getId() {
         return id;
     }
@@ -26,7 +26,7 @@ public class TblAlbumAnhEntity {
     }
 
     @Basic
-    @Column(name = "anh1", nullable = true, length = 250)
+    @Column(name = "anh1")
     public String getAnh1() {
         return anh1;
     }
@@ -36,7 +36,7 @@ public class TblAlbumAnhEntity {
     }
 
     @Basic
-    @Column(name = "anh2", nullable = true, length = 250)
+    @Column(name = "anh2")
     public String getAnh2() {
         return anh2;
     }
@@ -46,7 +46,7 @@ public class TblAlbumAnhEntity {
     }
 
     @Basic
-    @Column(name = "anh3", nullable = true, length = 250)
+    @Column(name = "anh3")
     public String getAnh3() {
         return anh3;
     }
@@ -56,7 +56,7 @@ public class TblAlbumAnhEntity {
     }
 
     @Basic
-    @Column(name = "anh4", nullable = true, length = 250)
+    @Column(name = "anh4")
     public String getAnh4() {
         return anh4;
     }
@@ -66,7 +66,7 @@ public class TblAlbumAnhEntity {
     }
 
     @Basic
-    @Column(name = "temp", nullable = true)
+    @Column(name = "temp")
     public Integer getTemp() {
         return temp;
     }
@@ -76,7 +76,7 @@ public class TblAlbumAnhEntity {
     }
 
     @Basic
-    @Column(name = "id_sanpham", nullable = true)
+    @Column(name = "id_sanpham")
     public Integer getIdSanpham() {
         return idSanpham;
     }

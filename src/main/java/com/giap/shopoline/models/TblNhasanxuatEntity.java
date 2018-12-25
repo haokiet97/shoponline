@@ -12,7 +12,7 @@ public class TblNhasanxuatEntity {
     private Collection<TblSanphamEntity> tblSanphamsById;
 
     @Id
-    @Column(name = "id", nullable = false)
+    @Column(name = "id")
     public int getId() {
         return id;
     }
@@ -22,7 +22,7 @@ public class TblNhasanxuatEntity {
     }
 
     @Basic
-    @Column(name = "ten", nullable = true, length = 50)
+    @Column(name = "ten")
     public String getTen() {
         return ten;
     }

@@ -17,7 +17,7 @@ public class TblKhachhangEntity {
     private Collection<TblDondathangEntity> tblDondathangsById;
 
     @Id
-    @Column(name = "id", nullable = false)
+    @Column(name = "id")
     public int getId() {
         return id;
     }
@@ -27,7 +27,7 @@ public class TblKhachhangEntity {
     }
 
     @Basic
-    @Column(name = "ten", nullable = true, length = 50)
+    @Column(name = "ten")
     public String getTen() {
         return ten;
     }
@@ -37,7 +37,7 @@ public class TblKhachhangEntity {
     }
 
     @Basic
-    @Column(name = "sdt", nullable = true, precision = 0)
+    @Column(name = "sdt")
     public Integer getSdt() {
         return sdt;
     }
@@ -47,7 +47,7 @@ public class TblKhachhangEntity {
     }
 
     @Basic
-    @Column(name = "matkhau", nullable = true, length = 10)
+    @Column(name = "matkhau")
     public String getMatkhau() {
         return matkhau;
     }
@@ -57,7 +57,7 @@ public class TblKhachhangEntity {
     }
 
     @Basic
-    @Column(name = "email", nullable = true, length = 100)
+    @Column(name = "email")
     public String getEmail() {
         return email;
     }
@@ -67,7 +67,7 @@ public class TblKhachhangEntity {
     }
 
     @Basic
-    @Column(name = "diachi", nullable = true, length = 250)
+    @Column(name = "diachi")
     public String getDiachi() {
         return diachi;
     }

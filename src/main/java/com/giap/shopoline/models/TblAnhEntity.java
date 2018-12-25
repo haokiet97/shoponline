@@ -12,7 +12,7 @@ public class TblAnhEntity {
     private TblSanphamEntity tblSanphamByIdSanpham;
 
     @Id
-    @Column(name = "id", nullable = false)
+    @Column(name = "id")
     public int getId() {
         return id;
     }
@@ -22,7 +22,7 @@ public class TblAnhEntity {
     }
 
     @Basic
-    @Column(name = "link", nullable = true, length = 255)
+    @Column(name = "link")
     public String getLink() {
         return link;
     }
@@ -32,7 +32,7 @@ public class TblAnhEntity {
     }
 
     @Basic
-    @Column(name = "id_sanpham", nullable = true)
+    @Column(name = "id_sanpham")
     public Integer getIdSanpham() {
         return idSanpham;
     }

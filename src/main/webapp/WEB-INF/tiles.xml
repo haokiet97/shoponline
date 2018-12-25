@@ -35,5 +35,12 @@
         <put-attribute name="content" value="searchview"/>
     </definition>
 
+    <definition name="admin" template="/WEB-INF/jsp/a_index.jsp">
+        <put-attribute name="content" value=""/>
+    </definition>
+
+
+    <!--Admin layout-->
+
 
 </tiles-definitions>

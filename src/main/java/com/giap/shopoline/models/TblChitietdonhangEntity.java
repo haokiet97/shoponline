@@ -15,7 +15,7 @@ public class TblChitietdonhangEntity {
     private TblSanphamEntity tblSanphamByIdSanpham;
 
     @Id
-    @Column(name = "id_dondathang", nullable = false)
+    @Column(name = "id_dondathang")
     public int getIdDondathang() {
         return idDondathang;
     }
@@ -25,7 +25,7 @@ public class TblChitietdonhangEntity {
     }
 
     @Id
-    @Column(name = "id_sanpham", nullable = false)
+    @Column(name = "id_sanpham")
     public int getIdSanpham() {
         return idSanpham;
     }
@@ -35,7 +35,7 @@ public class TblChitietdonhangEntity {
     }
 
     @Basic
-    @Column(name = "soluong", nullable = true)
+    @Column(name = "soluong")
     public Integer getSoluong() {
         return soluong;
     }
@@ -45,7 +45,7 @@ public class TblChitietdonhangEntity {
     }
 
     @Basic
-    @Column(name = "gia", nullable = true, precision = 0)
+    @Column(name = "gia")
     public Integer getGia() {
         return gia;
     }

@@ -9,7 +9,7 @@ public class TblChitietdonhangEntityPK implements Serializable {
     private int idDondathang;
     private int idSanpham;
 
-    @Column(name = "id_dondathang", nullable = false)
+    @Column(name = "id_dondathang")
     @Id
     public int getIdDondathang() {
         return idDondathang;
@@ -19,7 +19,7 @@ public class TblChitietdonhangEntityPK implements Serializable {
         this.idDondathang = idDondathang;
     }
 
-    @Column(name = "id_sanpham", nullable = false)
+    @Column(name = "id_sanpham")
     @Id
     public int getIdSanpham() {
         return idSanpham;

@@ -16,7 +16,7 @@ public class TblTaikhoanEntity {
     private TblNhanvienEntity tblNhanvienByIdNhanvien;
 
     @Id
-    @Column(name = "id", nullable = false)
+    @Column(name = "id")
     public int getId() {
         return id;
     }
@@ -26,7 +26,7 @@ public class TblTaikhoanEntity {
     }
 
     @Basic
-    @Column(name = "id_quyen", nullable = true)
+    @Column(name = "id_quyen")
     public Integer getIdQuyen() {
         return idQuyen;
     }
@@ -36,7 +36,7 @@ public class TblTaikhoanEntity {
     }
 
     @Basic
-    @Column(name = "tentaikhoan", nullable = true, length = 50)
+    @Column(name = "tentaikhoan")
     public String getTentaikhoan() {
         return tentaikhoan;
     }
@@ -46,7 +46,7 @@ public class TblTaikhoanEntity {
     }
 
     @Basic
-    @Column(name = "matkhau", nullable = true, length = 30)
+    @Column(name = "matkhau")
     public String getMatkhau() {
         return matkhau;
     }
@@ -56,7 +56,7 @@ public class TblTaikhoanEntity {
     }
 
     @Basic
-    @Column(name = "id_nhanvien", nullable = true)
+    @Column(name = "id_nhanvien")
     public Integer getIdNhanvien() {
         return idNhanvien;
     }
@@ -66,7 +66,7 @@ public class TblTaikhoanEntity {
     }
 
     @Basic
-    @Column(name = "trangthai", nullable = true)
+    @Column(name = "trangthai")
     public Boolean getTrangthai() {
         return trangthai;
     }
