@@ -1,20 +1,16 @@
-package com.giap.shopoline.dao;
+package com.giap.shopoline.utils;
 
-import com.giap.shopoline.models.TblAnhEntity;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 
-import java.util.List;
-
-
-public class AnhDao {
+public class HibernateUtil {
     private Session currentSession;
     private Transaction currentTransaction;
 
-    public AnhDao() {
+    public HibernateUtil() {
     }
 
     public Session openCurrentSession() {
@@ -60,36 +56,5 @@ public class AnhDao {
     public void setCurrentTransaction(Transaction currentTransaction) {
         this.currentTransaction = currentTransaction;
     }
-
-    public void persist(TblAnhEntity entity) {
-        getCurrentSession().save(entity);
-    }
-
-    public void update(TblAnhEntity entity) {
-        getCurrentSession().update(entity);
-    }
-
-    public TblAnhEntity findById(String id) {
-        TblAnhEntity TblAnhEntity = (TblAnhEntity) getCurrentSession().get(TblAnhEntity.class, id);
-        return TblAnhEntity;
-    }
-
-    public void delete(TblAnhEntity entity) {
-        getCurrentSession().delete(entity);
-    }
-
-    @SuppressWarnings("unchecked")
-    public List<TblAnhEntity> findAll() {
-        List<TblAnhEntity> TblAnhEntitys = (List<TblAnhEntity>) this.getCurrentSession().createQuery("from TblAnhEntity").list();
-        return TblAnhEntitys;
-    }
-
-    public void deleteAll() {
-        List<TblAnhEntity> entityList = findAll();
-        for (TblAnhEntity entity : entityList) {
-            delete(entity);
-        }
-    }
-
 
 }

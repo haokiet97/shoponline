@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.giap.shopoline.models.TblKhachhangEntity" table="tbl_khachhang" schema="dbo" catalog="QuanLiDT">
+        <id name="id">
+            <column name="id" sql-type="int"/>
+        </id>
+        <property name="ten">
+            <column name="ten" sql-type="nvarchar(50)" length="50" not-null="true"/>
+        </property>
+        <property name="sdt">
+            <column name="sdt" sql-type="decimal(18)" precision="18" not-null="true"/>
+        </property>
+        <property name="matkhau">
+            <column name="matkhau" sql-type="nchar(10)" length="10" not-null="true"/>
+        </property>
+        <property name="email">
+            <column name="email" sql-type="varchar(100)" length="100" not-null="true"/>
+        </property>
+        <property name="diachi">
+            <column name="diachi" sql-type="nvarchar(250)" length="250" not-null="true"/>
+        </property>
+        <set name="tblBinhluansById" inverse="true">
+            <key>
+                <column name="id_khachhang" not-null="true"/>
+            </key>
+            <one-to-many not-found="ignore" class="com.giap.shopoline.models.TblBinhluanEntity"/>
+        </set>
+        <set name="tblDondathangsById" inverse="true">
+            <key>
+                <column name="id_khachhang" not-null="true"/>
+            </key>
+            <one-to-many not-found="ignore" class="com.giap.shopoline.models.TblDondathangEntity"/>
+        </set>
+    </class>
+</hibernate-mapping>

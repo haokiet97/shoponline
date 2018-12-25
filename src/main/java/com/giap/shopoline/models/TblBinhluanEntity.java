@@ -14,7 +14,7 @@ public class TblBinhluanEntity {
     private TblSanphamEntity tblSanphamByIdSanpham;
 
     @Id
-    @Column(name = "id")
+    @Column(name = "id", nullable = false)
     public int getId() {
         return id;
     }
@@ -24,7 +24,7 @@ public class TblBinhluanEntity {
     }
 
     @Basic
-    @Column(name = "id_khachhang")
+    @Column(name = "id_khachhang", nullable = true)
     public Integer getIdKhachhang() {
         return idKhachhang;
     }
@@ -34,7 +34,7 @@ public class TblBinhluanEntity {
     }
 
     @Basic
-    @Column(name = "noidung")
+    @Column(name = "noidung", nullable = true, length = 350)
     public String getNoidung() {
         return noidung;
     }
@@ -44,7 +44,7 @@ public class TblBinhluanEntity {
     }
 
     @Basic
-    @Column(name = "id_sanpham")
+    @Column(name = "id_sanpham", nullable = true)
     public Integer getIdSanpham() {
         return idSanpham;
     }

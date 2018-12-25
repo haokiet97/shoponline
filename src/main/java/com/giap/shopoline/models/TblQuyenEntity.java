@@ -12,7 +12,7 @@ public class TblQuyenEntity {
     private Collection<TblTaikhoanEntity> tblTaikhoansById;
 
     @Id
-    @Column(name = "id")
+    @Column(name = "id", nullable = false)
     public int getId() {
         return id;
     }
@@ -22,7 +22,7 @@ public class TblQuyenEntity {
     }
 
     @Basic
-    @Column(name = "ten")
+    @Column(name = "ten", nullable = true, length = 50)
     public String getTen() {
         return ten;
     }

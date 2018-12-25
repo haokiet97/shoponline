@@ -1,3 +1,4 @@
+<%@ page import="com.giap.shopoline.models.TblAnhEntity" %>
 <!DOCTYPE html>
 <html lang="en">
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
@@ -12,6 +13,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title> @ViewBag.Title | GTmobile-Điện thoại, tablet và các dịch vụ hỗ trợ</title>
+
     <spring:url value="/css/layout/bootstrap.css" var="springCss1"/>
     <link href="${springCss1}" rel="stylesheet">
     <spring:url value="/css/layout/font-awesome.min.css" var="springCss2"/>
@@ -136,6 +138,11 @@
 </header><!--/header-->
 <%--render body--%>
 <tiles:insertAttribute name="content"/>
+<%--<%--%>
+<%--for (TblAnhEntity item: data){--%>
+<%--item.getLink();--%>
+<%--}--%>
+<%--%>--%>
 
 <br/>
 <br/>

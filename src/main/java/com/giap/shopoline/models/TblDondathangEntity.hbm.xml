@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.giap.shopoline.models.TblDondathangEntity" table="tbl_dondathang" schema="dbo" catalog="QuanLiDT">
+        <id name="id">
+            <column name="id" sql-type="int"/>
+        </id>
+        <property name="idKhachhang">
+            <column name="id_khachhang" sql-type="int" not-null="true"/>
+        </property>
+        <property name="idNhanvien">
+            <column name="id_nhanvien" sql-type="int" not-null="true"/>
+        </property>
+        <property name="ngaylap">
+            <column name="ngaylap" sql-type="date" not-null="true"/>
+        </property>
+        <property name="tonggia">
+            <column name="tonggia" sql-type="decimal(18)" precision="18" not-null="true"/>
+        </property>
+        <property name="tinhtrang">
+            <column name="tinhtrang" sql-type="nvarchar(50)" length="50" not-null="true"/>
+        </property>
+        <property name="ghichu">
+            <column name="ghichu" sql-type="nvarchar(50)" length="50" not-null="true"/>
+        </property>
+        <many-to-one name="tblKhachhangByIdKhachhang" class="com.giap.shopoline.models.TblKhachhangEntity">
+            <column name="id_khachhang" not-null="true"/>
+        </many-to-one>
+        <many-to-one name="tblNhanvienByIdNhanvien" class="com.giap.shopoline.models.TblNhanvienEntity">
+            <column name="id_nhanvien" not-null="true"/>
+        </many-to-one>
+        <set name="tblChitietdonhangsById" inverse="true">
+            <key>
+                <column name="id_dondathang"/>
+            </key>
+            <one-to-many not-found="ignore" class="com.giap.shopoline.models.TblChitietdonhangEntity"/>
+        </set>
+    </class>
+</hibernate-mapping>

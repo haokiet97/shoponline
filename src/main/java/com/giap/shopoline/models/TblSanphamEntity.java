@@ -33,7 +33,7 @@ public class TblSanphamEntity {
     private TblNhasanxuatEntity tblNhasanxuatByIdNhasanxuat;
 
     @Id
-    @Column(name = "id")
+    @Column(name = "id", nullable = false)
     public int getId() {
         return id;
     }
@@ -43,7 +43,7 @@ public class TblSanphamEntity {
     }
 
     @Basic
-    @Column(name = "id_danhmuc")
+    @Column(name = "id_danhmuc", nullable = true)
     public Integer getIdDanhmuc() {
         return idDanhmuc;
     }
@@ -53,7 +53,7 @@ public class TblSanphamEntity {
     }
 
     @Basic
-    @Column(name = "ten")
+    @Column(name = "ten", nullable = true, length = 150)
     public String getTen() {
         return ten;
     }
@@ -63,7 +63,7 @@ public class TblSanphamEntity {
     }
 
     @Basic
-    @Column(name = "gia")
+    @Column(name = "gia", nullable = true, precision = 0)
     public Integer getGia() {
         return gia;
     }
@@ -73,7 +73,7 @@ public class TblSanphamEntity {
     }
 
     @Basic
-    @Column(name = "soluong")
+    @Column(name = "soluong", nullable = true)
     public Integer getSoluong() {
         return soluong;
     }
@@ -83,7 +83,7 @@ public class TblSanphamEntity {
     }
 
     @Basic
-    @Column(name = "trongluong")
+    @Column(name = "trongluong", nullable = true, length = 10)
     public String getTrongluong() {
         return trongluong;
     }
@@ -93,7 +93,7 @@ public class TblSanphamEntity {
     }
 
     @Basic
-    @Column(name = "ROM")
+    @Column(name = "ROM", nullable = true, length = 10)
     public String getRom() {
         return rom;
     }
@@ -103,7 +103,7 @@ public class TblSanphamEntity {
     }
 
     @Basic
-    @Column(name = "RAM")
+    @Column(name = "RAM", nullable = true, length = 10)
     public String getRam() {
         return ram;
     }
@@ -113,7 +113,7 @@ public class TblSanphamEntity {
     }
 
     @Basic
-    @Column(name = "thenho")
+    @Column(name = "thenho", nullable = true, length = 50)
     public String getThenho() {
         return thenho;
     }
@@ -123,7 +123,7 @@ public class TblSanphamEntity {
     }
 
     @Basic
-    @Column(name = "camera_truoc")
+    @Column(name = "camera_truoc", nullable = true, length = 10)
     public String getCameraTruoc() {
         return cameraTruoc;
     }
@@ -133,7 +133,7 @@ public class TblSanphamEntity {
     }
 
     @Basic
-    @Column(name = "camera_sau")
+    @Column(name = "camera_sau", nullable = true, length = 10)
     public String getCameraSau() {
         return cameraSau;
     }
@@ -143,7 +143,7 @@ public class TblSanphamEntity {
     }
 
     @Basic
-    @Column(name = "pin")
+    @Column(name = "pin", nullable = true)
     public Integer getPin() {
         return pin;
     }
@@ -153,7 +153,7 @@ public class TblSanphamEntity {
     }
 
     @Basic
-    @Column(name = "baohanh")
+    @Column(name = "baohanh", nullable = true, length = 50)
     public String getBaohanh() {
         return baohanh;
     }
@@ -163,7 +163,7 @@ public class TblSanphamEntity {
     }
 
     @Basic
-    @Column(name = "bluetooth")
+    @Column(name = "bluetooth", nullable = true)
     public Integer getBluetooth() {
         return bluetooth;
     }
@@ -173,7 +173,7 @@ public class TblSanphamEntity {
     }
 
     @Basic
-    @Column(name = "id_nhasanxuat")
+    @Column(name = "id_nhasanxuat", nullable = true)
     public Integer getIdNhasanxuat() {
         return idNhasanxuat;
     }
@@ -183,7 +183,7 @@ public class TblSanphamEntity {
     }
 
     @Basic
-    @Column(name = "CPU")
+    @Column(name = "CPU", nullable = true, length = 50)
     public String getCpu() {
         return cpu;
     }
@@ -193,7 +193,7 @@ public class TblSanphamEntity {
     }
 
     @Basic
-    @Column(name = "manhinh")
+    @Column(name = "manhinh", nullable = true, length = 50)
     public String getManhinh() {
         return manhinh;
     }
@@ -203,7 +203,7 @@ public class TblSanphamEntity {
     }
 
     @Basic
-    @Column(name = "status")
+    @Column(name = "status", nullable = true)
     public Integer getStatus() {
         return status;
     }

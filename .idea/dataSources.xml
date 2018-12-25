@@ -4,9 +4,8 @@
     <data-source source="LOCAL" name="QuanLiDT@127.0.0.1" uuid="d44955db-f4ad-4c0e-adc6-8a42d8a9d4bf">
       <driver-ref>sqlserver.ms</driver-ref>
       <synchronize>true</synchronize>
-      <configured-by-url>true</configured-by-url>
       <jdbc-driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</jdbc-driver>
-      <jdbc-url>jdbc:sqlserver://127.0.0.1\SQLEXPRESS:1433;database=QuanLiDT;user=sa;password=icui4cu;</jdbc-url>
+      <jdbc-url>jdbc:sqlserver://127.0.0.1\SQLEXPRESS:1433;database=QuanLiDT;</jdbc-url>
       <driver-properties>
         <property name="appName" value="DataGrip" />
         <property name="applicationName" value="DataGrip" />

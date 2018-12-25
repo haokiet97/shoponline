@@ -2,63 +2,59 @@ package com.giap.shopoline.services;
 
 import com.giap.shopoline.dao.AnhDao;
 import com.giap.shopoline.models.TblAnhEntity;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-
 @Service
 public class AnhService {
-    @Autowired
-    @Qualifier("AnhData")
-    private static AnhDao dao;
+    private static AnhDao Anhdao;
 
     public AnhService() {
-        dao = new AnhDao();
+        Anhdao = new AnhDao();
     }
 
     public void persist(TblAnhEntity entity) {
-        dao.openCurrentSessionwithTransaction();
-        dao.persist(entity);
-        dao.closeCurrentSessionwithTransaction();
+        Anhdao.openCurrentSessionwithTransaction();
+        Anhdao.persist(entity);
+        Anhdao.closeCurrentSessionwithTransaction();
     }
 
     public void update(TblAnhEntity entity) {
-        dao.openCurrentSessionwithTransaction();
-        dao.update(entity);
-        dao.closeCurrentSessionwithTransaction();
+        Anhdao.openCurrentSessionwithTransaction();
+        Anhdao.update(entity);
+        Anhdao.closeCurrentSessionwithTransaction();
     }
 
+
     public TblAnhEntity findById(String id) {
-        dao.openCurrentSession();
-        TblAnhEntity book = dao.findById(id);
-        dao.closeCurrentSession();
-        return book;
+        Anhdao.openCurrentSession();
+        TblAnhEntity TblAnhEntity = Anhdao.findById(id);
+        Anhdao.closeCurrentSession();
+        return TblAnhEntity;
     }
 
     public void delete(String id) {
-        dao.openCurrentSessionwithTransaction();
-        TblAnhEntity book = dao.findById(id);
-        dao.delete(book);
-        dao.closeCurrentSessionwithTransaction();
+        Anhdao.openCurrentSessionwithTransaction();
+        TblAnhEntity TblAnhEntity = Anhdao.findById(id);
+        Anhdao.delete(TblAnhEntity);
+        Anhdao.closeCurrentSessionwithTransaction();
     }
 
     public List<TblAnhEntity> findAll() {
-        dao.openCurrentSession();
-        List<TblAnhEntity> books = dao.findAll();
-        dao.closeCurrentSession();
-        return books;
+        Anhdao.openCurrentSession();
+        List<TblAnhEntity> TblAnhEntitys = Anhdao.findAll();
+        Anhdao.closeCurrentSession();
+        return TblAnhEntitys;
     }
 
     public void deleteAll() {
-        dao.openCurrentSessionwithTransaction();
-        dao.deleteAll();
-        dao.closeCurrentSessionwithTransaction();
+        Anhdao.openCurrentSessionwithTransaction();
+        Anhdao.deleteAll();
+        Anhdao.closeCurrentSessionwithTransaction();
     }
 
-    public AnhDao anhDao() {
-        return dao;
+    public AnhDao Anhdao() {
+        return Anhdao;
     }
 
 

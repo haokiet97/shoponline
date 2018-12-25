@@ -20,7 +20,7 @@ public class TblDondathangEntity {
     private TblNhanvienEntity tblNhanvienByIdNhanvien;
 
     @Id
-    @Column(name = "id")
+    @Column(name = "id", nullable = false)
     public int getId() {
         return id;
     }
@@ -30,7 +30,7 @@ public class TblDondathangEntity {
     }
 
     @Basic
-    @Column(name = "id_khachhang")
+    @Column(name = "id_khachhang", nullable = true)
     public Integer getIdKhachhang() {
         return idKhachhang;
     }
@@ -40,7 +40,7 @@ public class TblDondathangEntity {
     }
 
     @Basic
-    @Column(name = "id_nhanvien")
+    @Column(name = "id_nhanvien", nullable = true)
     public Integer getIdNhanvien() {
         return idNhanvien;
     }
@@ -50,7 +50,7 @@ public class TblDondathangEntity {
     }
 
     @Basic
-    @Column(name = "ngaylap")
+    @Column(name = "ngaylap", nullable = true)
     public Date getNgaylap() {
         return ngaylap;
     }
@@ -60,7 +60,7 @@ public class TblDondathangEntity {
     }
 
     @Basic
-    @Column(name = "tonggia")
+    @Column(name = "tonggia", nullable = true, precision = 0)
     public Integer getTonggia() {
         return tonggia;
     }
@@ -70,7 +70,7 @@ public class TblDondathangEntity {
     }
 
     @Basic
-    @Column(name = "tinhtrang")
+    @Column(name = "tinhtrang", nullable = true, length = 50)
     public String getTinhtrang() {
         return tinhtrang;
     }
@@ -80,7 +80,7 @@ public class TblDondathangEntity {
     }
 
     @Basic
-    @Column(name = "ghichu")
+    @Column(name = "ghichu", nullable = true, length = 50)
     public String getGhichu() {
         return ghichu;
     }

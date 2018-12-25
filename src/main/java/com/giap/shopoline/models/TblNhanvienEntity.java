@@ -19,7 +19,7 @@ public class TblNhanvienEntity {
     private Collection<TblTaikhoanEntity> tblTaikhoansById;
 
     @Id
-    @Column(name = "id")
+    @Column(name = "id", nullable = false)
     public int getId() {
         return id;
     }
@@ -29,7 +29,7 @@ public class TblNhanvienEntity {
     }
 
     @Basic
-    @Column(name = "ten")
+    @Column(name = "ten", nullable = true, length = 100)
     public String getTen() {
         return ten;
     }
@@ -39,7 +39,7 @@ public class TblNhanvienEntity {
     }
 
     @Basic
-    @Column(name = "sdt")
+    @Column(name = "sdt", nullable = true, precision = 0)
     public Integer getSdt() {
         return sdt;
     }
@@ -49,7 +49,7 @@ public class TblNhanvienEntity {
     }
 
     @Basic
-    @Column(name = "email")
+    @Column(name = "email", nullable = true, length = 100)
     public String getEmail() {
         return email;
     }
@@ -59,7 +59,7 @@ public class TblNhanvienEntity {
     }
 
     @Basic
-    @Column(name = "ngaysinh")
+    @Column(name = "ngaysinh", nullable = true)
     public Date getNgaysinh() {
         return ngaysinh;
     }
@@ -69,7 +69,7 @@ public class TblNhanvienEntity {
     }
 
     @Basic
-    @Column(name = "gioitinh")
+    @Column(name = "gioitinh", nullable = true)
     public Boolean getGioitinh() {
         return gioitinh;
     }
@@ -79,7 +79,7 @@ public class TblNhanvienEntity {
     }
 
     @Basic
-    @Column(name = "diachi")
+    @Column(name = "diachi", nullable = true, length = 100)
     public String getDiachi() {
         return diachi;
     }

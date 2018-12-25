@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.giap.shopoline.models.TblBinhluanEntity" table="tbl_binhluan" schema="dbo" catalog="QuanLiDT">
+        <id name="id">
+            <column name="id" sql-type="int"/>
+        </id>
+        <property name="idKhachhang">
+            <column name="id_khachhang" sql-type="int" not-null="true"/>
+        </property>
+        <property name="noidung">
+            <column name="noidung" sql-type="nvarchar(350)" length="350" not-null="true"/>
+        </property>
+        <property name="idSanpham">
+            <column name="id_sanpham" sql-type="int" not-null="true"/>
+        </property>
+        <many-to-one name="tblKhachhangByIdKhachhang" class="com.giap.shopoline.models.TblKhachhangEntity">
+            <column name="id_khachhang" not-null="true"/>
+        </many-to-one>
+        <many-to-one name="tblSanphamByIdSanpham" class="com.giap.shopoline.models.TblSanphamEntity">
+            <column name="id_sanpham" not-null="true"/>
+        </many-to-one>
+    </class>
+</hibernate-mapping>
