@@ -7,10 +7,10 @@
 
     <div class="container">
         <div class="breadcrumbs">
-            <h3>@{notice}</h3>
+            <h3>${notice}</h3>
             <p>Giỏ hàng của bạn đang trống!</p>
             <ol class="breadcrumb">
-                <li><a href="/Home/Index">Trang Chủ</a></li>
+                <li><a href="/">Trang Chủ</a></li>
                 <li class="active">Giỏ Hàng</li>
             </ol>
         </div>
