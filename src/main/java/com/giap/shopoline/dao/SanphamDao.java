@@ -8,12 +8,12 @@ import org.hibernate.cfg.Configuration;
 
 import java.util.List;
 
-public class SanPhamDao {
+public class SanphamDao {
 
     private Session currentSession;
     private Transaction currentTransaction;
 
-    public SanPhamDao() {
+    public SanphamDao() {
     }
 
     public Session openCurrentSession() {

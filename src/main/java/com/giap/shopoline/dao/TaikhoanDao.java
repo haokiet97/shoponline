@@ -8,12 +8,12 @@ import org.hibernate.cfg.Configuration;
 
 import java.util.List;
 
-public class TaiKhoanDao {
+public class TaikhoanDao {
 
     private Session currentSession;
     private Transaction currentTransaction;
 
-    public TaiKhoanDao() {
+    public TaikhoanDao() {
     }
 
     public Session openCurrentSession() {
