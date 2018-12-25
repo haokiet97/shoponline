@@ -27,14 +27,14 @@ public class SanphamService {
     }
 
 
-    public TblSanphamEntity findById(String id) {
+    public TblSanphamEntity findById(int id) {
         dao.openCurrentSession();
         TblSanphamEntity TblSanphamEntity = dao.findById(id);
         dao.closeCurrentSession();
         return TblSanphamEntity;
     }
 
-    public void delete(String id) {
+    public void delete(int id) {
         dao.openCurrentSessionwithTransaction();
         TblSanphamEntity TblSanphamEntity = dao.findById(id);
         dao.delete(TblSanphamEntity);

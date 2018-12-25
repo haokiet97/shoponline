@@ -4,6 +4,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
@@ -151,12 +152,12 @@
             <div class="col-sm-8">
                 <div class="product-information">
                     <!--/product-information-->
-                    <img src="~/Resources/new.jpg" class="newarrival" alt="">
-                    <h2>@item.ten</h2>
-                    <p>Nhà Sản Xuất: @item.tbl_nhasanxuat.ten</p>
-                    <img src="~/Resources/rating.png" alt="">
+                    <img src="/images/layout/new.jpg" class="newarrival" alt="">
+                    <h2>${sanpham.getTen()}</h2>
+                    <p>Nhà Sản Xuất: ${sanpham.getTblNhasanxuatByIdNhasanxuat().getTen()}</p>
+                    <img src="/images/layout/rating.png" alt="">
                     <span>
-                        <span>Giá: @(item.gia.GetValueOrDefault() > 0 ? item.gia.Value.ToString("N0") + " Đ" : "Liên Hệ")</span>
+                        <span>Giá: ${java.text.NumberFormat.getInstance().format(sanpham.gia)}</span>
                         <label>Số lượng:</label>
                         <input value="1" type="text" id="num-of-product">
                         <button type="button" class="btn btn-fefault cart" id="addtocart" onclick="additem()">
@@ -164,11 +165,10 @@
                             Thêm giỏ hàng
                         </button>
                     </span>
-                    <p><b>Số lượng:</b> @(item.soluong.GetValueOrDefault() > 0 ? "Có " + item.soluong.Value.ToString() +
-                        " sản phẩm." : "Tạm hết hàng.")</p>
+                    <p><b>Số lượng:</b> ${sanpham.soluong}</p>
                     <p><b>Tình trạng:</b>Mới</p>
                     <p><b>Brand:</b> GT-mobile</p>
-                    @*<a href=""><img src="images/product-details/share.png" class="share img-responsive" alt=""></a>*@
+                    <%--<a href=""><img src="images/product-details/share.png" class="share img-responsive" alt=""></a>--%>
                 </div><!--/product-information-->
             </div>
         </div><!--/product-details-->
@@ -190,36 +190,36 @@
                             <table class="table table-bordered table-striped table-hover">
                                 <tr>
                                     <th>Tên</th>
-                                    <td>@item.ten</td>
+                                    <td>${sanpham.ten}</td>
                                 </tr>
                                 <tr>
                                     <th>Nhà Sản Xuất</th>
-                                    <td>@item.tbl_nhasanxuat.ten</td>
+                                    <td>${sanpham.getTblNhasanxuatByIdNhasanxuat().getTen()}</td>
                                 </tr>
                                 <tr>
                                     <th>CPU</th>
-                                    <td>@item.CPU</td>
+                                    <td>${sanpham.getCpu()}</td>
                                 </tr>
                                 <tr>
                                     <th>ROM</th>
-                                    <td>@item.ROM</td>
+                                    <td>${sanpham.getRom()}</td>
                                 </tr>
                                 <tr>
                                     <th>RAM</th>
-                                    <td>@item.RAM</td>
+                                    <td>${sanpham.getRam()}</td>
                                 </tr>
                                 <tr>
                                     <th>Camera</th>
-                                    <td>Trước: @item.camera_truoc.GetValueOrDefault() mpx, Sau:
-                                        @item.camera_sau.GetValueOrDefault()
+                                    <td>Trước: ${sanpham.getCameraTruoc()} mpx, Sau:
+                                        ${sanpham.getCameraSau()} mpx
                                     </td>
                                 <tr>
                                     <th>Màn Hình</th>
-                                    <td>@item.manhinh.GetValueOrDefault() Inc</td>
+                                    <td>${sanpham.getManhinh()} Inches</td>
                                 </tr>
                                 <tr>
                                     <th>Pin</th>
-                                    <td>@item.pin.GetValueOrDefault() mAh</td>
+                                    <td>${sanpham.getPin()} mAh</td>
                                 </tr>
 
                             </table>
@@ -244,7 +244,7 @@
                                 <input placeholder="Email Address" type="email">
                             </span>
                             <textarea name=""></textarea>
-                            <b>Rating: </b> <img src="images/product-details/rating.png" alt="">
+                            <b>Rating: </b> <img src="/images/product-details/rating.png" alt="">
                             <button type="button" class="btn btn-default pull-right">
                                 Submit
                             </button>
@@ -262,42 +262,41 @@
             <div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="item active">
-                        @foreach (var r_item in listRC)
-                        {
+                        <c:forEach items="${lstsanpham}" var="lst">
                         <div class="col-md-3">
                             <div class="product-image-wrapper">
                                 <div class="single-products">
                                     <div class="productinfo text-center">
                                         <img src="@r_item.link_anh" alt="" height="260">
-                                        <h2>@r_item.gia.GetValueOrDefault().ToString("N0") Đ</h2>
-                                        <p>@r_item.ten</p>
-                                        <a class="btn btn-default add-to-cart" href="/Cart/AddItem/@item.id"><i
+                                        <h2>${java.text.NumberFormat.getInstance().format(lst.getGia())} Đ</h2>
+                                        <p>${lst.getTen()}</p>
+                                        <a class="btn btn-default add-to-cart" href="/Cart/AddItem/${lst.getId()}"><i
                                                 class="fa fa-shopping-cart"></i>Add to cart</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        }
+                        </c:forEach>
 
 
                     </div>
                     <div class="item">
-                        @foreach (var r_item in listRC)
-                        {
-                        <div class="col-md-3">
-                            <div class="product-image-wrapper">
-                                <div class="single-products">
-                                    <div class="productinfo text-center">
-                                        <img src="@r_item.link_anh" alt="" height="260">
-                                        <h2>@r_item.gia.GetValueOrDefault().ToString("N0") Đ</h2>
-                                        <p>@r_item.ten</p>
-                                        <a class="btn btn-default add-to-cart" href="/Cart/AddItem/@item.id"><i
-                                                class="fa fa-shopping-cart"></i>Add to cart</a>
+                        <c:forEach items="${lstsanpham}" var="lst">
+                            <div class="col-md-3">
+                                <div class="product-image-wrapper">
+                                    <div class="single-products">
+                                        <div class="productinfo text-center">
+                                            <img src="@r_item.link_anh" alt="" height="260">
+                                            <h2>${java.text.NumberFormat.getInstance().format(lst.getGia())} Đ</h2>
+                                            <p>${lst.getTen()}</p>
+                                            <a class="btn btn-default add-to-cart"
+                                               href="/Cart/AddItem/${lst.getId()}"><i
+                                                    class="fa fa-shopping-cart"></i>Add to cart</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        }
+                        </c:forEach>
 
                     </div>
                 </div>
@@ -314,7 +313,7 @@
             function additem() {
                 var count = $('#num-of-product').val();
                 if (count > 0) {
-                    var ulr = "/Cart/AddItems/?id=" +@item.id.ToString() + '&' + "count=" + count;
+                    var ulr = "/Cart/AddItems/?id=" + ${sanpham.getId()} +'&' + "count=" + count;
                     window.location.href = ulr;
                 }
             }

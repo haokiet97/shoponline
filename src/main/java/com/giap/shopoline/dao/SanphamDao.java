@@ -69,7 +69,7 @@ public class SanphamDao {
         getCurrentSession().update(entity);
     }
 
-    public TblSanphamEntity findById(String id) {
+    public TblSanphamEntity findById(int id) {
         TblSanphamEntity TblSanphamEntity = (TblSanphamEntity) getCurrentSession().get(TblSanphamEntity.class, id);
         return TblSanphamEntity;
     }

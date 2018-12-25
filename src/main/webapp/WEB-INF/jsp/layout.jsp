@@ -75,7 +75,7 @@
             <div class="row">
                 <div class="col-sm-4">
                     <div class="logo pull-left">
-                        <a href="#"><img src="/images/home/logo.png" alt="Logo.png"/></a>
+                        <a href="/"><img src="/images/home/logo.png" alt="Logo.png"/></a>
                     </div>
 
                 </div>
@@ -85,7 +85,7 @@
                             <li><a href=""><i class="fa fa-user"></i> Tài Khoản</a></li>
                             <li><a href=""><i class="fa fa-star"></i> Yêu Thích</a></li>
                             <li><a href=""><i class="fa fa-crosshairs"></i> Checkout</a></li>
-                            <li><a href="/Cart/Index"><i class="fa fa-shopping-cart"></i> Giỏ
+                            <li><a href="/Cart/"><i class="fa fa-shopping-cart"></i> Giỏ
                                 Hàng(@_count.ToString())</a></li>
                             <li><a href="/Admin/Login/Login"><i class="fa fa-lock"></i>Đăng Nhập</a></li>
                         </ul>
@@ -112,13 +112,13 @@
                     <div class="mainmenu pull-left">
                         <ul class="nav navbar-nav collapse navbar-collapse">
                             <li><a href="/">Trang Chủ</a></li>
-                            <li><a href="/Home/Category/?CategoryID=1">Điện Thoại</a></li>
-                            <li><a href="/Home/Category/?CategoryID=2">Tablet</a></li>
-                            <li><a href="/Home/Producer/?ProducerID=2">Iphone</a></li>
-                            <li><a href="/Home/Producer/?ProducerID=1">Samsung</a></li>
-                            <li><a href="/Home/Category/?CategoryID=3">Phụ Kiện</a></li>
-                            <li><a href="/Home/Category/?CategoryID=4">Sửa Chữa</a></li>
-                            <li><a href="/Home/Category/?CategoryID=5">Khuyến Mại</a></li>
+                            <li><a href="/Category/1">Điện Thoại</a></li>
+                            <li><a href="/Category/2">Tablet</a></li>
+                            <li><a href="/Producer/1">Iphone</a></li>
+                            <li><a href="/Producer/2">Samsung</a></li>
+                            <li><a href="/Category/3">Phụ Kiện</a></li>
+                            <li><a href="/Category/4">Sửa Chữa</a></li>
+                            <li><a href="/Category/5">Khuyến Mại</a></li>
                         </ul>
                     </div>
                 </div>

@@ -9,35 +9,31 @@
         <h2>Danh Mục</h2>
         <div class="panel-group category-products" id="accordian">
             <!--category-productsr-->
-            @foreach (var item in Model)
-            {
+            <c:forEach items="${danhmuc}" var="item">
             <div class="panel panel-default">
                 <div id="panel-heading" class="panel-heading">
-                    <h4 class="panel-title"><a id="panel-title" href="/Home/Category/?CategoryID=@item.id">@item.ten</a>
+                    <h4 class="panel-title"><a id="panel-title" href="/DanhMuc/${item.id}">${item.ten}</a>
                     </h4>
                 </div>
             </div>
-            }
+            </c:forEach>
 
         </div><!--/category-products-->
-        @if (nsx != null)
-        {
+
         <div class="brands_products">
             <!--brands_products-->
             <h2>Thương Hiệu</h2>
             <div class="brands-name">
                 <ul class="nav nav-pills nav-stacked">
-                    @foreach (var _item in nsx)
-                    {
-                    <li><a id="brans-heading" href="/Home/Producer/?ProducerID=@_item.NhaSanXuat.id"> <span
-                            class="pull-right">(@_item.SoSanPham)</span>@_item.NhaSanXuat.ten</a></li>
-                    }
+                    <c:forEach items="${nhasanxuat}" var="item">
+                        <li><a id="brans-heading" href="/NhaSanXuat/${item.id}"> <span
+                                class="pull-right">(0)</span>${item.ten}</a></li>
+                    </c:forEach>
 
                 </ul>
             </div>
         </div><!--/brands_products-->
 
-        }
 
         <div class="price-range">
             <!--price-range-->
