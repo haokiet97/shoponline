@@ -18,5 +18,4 @@ public class AdminController {
         model.addAttribute("data", datas);
         return "admin";
     }
-
 }
