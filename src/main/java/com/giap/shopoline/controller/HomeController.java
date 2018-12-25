@@ -18,15 +18,17 @@ public class HomeController {
         model.put("message", this.message);
         return "home";
     }
+
     //chitietsanpham
-    @RequestMapping(value ={"/Detail/{id}","/ChiTiet/{id}"},method = RequestMethod.GET)
+    @RequestMapping(value = {"/Detail/{id}", "/ChiTiet/{id}"}, method = RequestMethod.GET)
     public String Detail(Map<String, Object> model) {
 
         model.put("message", this.message);
         return "detail";
     }
+
     //san pham theo  NSX
-    @RequestMapping(value ={"/Producer/{id}","/NhaSanXuat/{id}"},method = RequestMethod.GET)
+    @RequestMapping(value = {"/Producer/{id}", "/NhaSanXuat/{id}"}, method = RequestMethod.GET)
     public String Producer(Map<String, Object> model) {
 
         model.put("message", this.message);
@@ -34,14 +36,14 @@ public class HomeController {
     }
 
     //san pham theo danh muc
-    @RequestMapping(value ={"/Category/{id}","/DanhMuc/{id}"},method = RequestMethod.GET)
+    @RequestMapping(value = {"/Category/{id}", "/DanhMuc/{id}"}, method = RequestMethod.GET)
     public String Category(Map<String, Object> model) {
 
         model.put("message", this.message);
         return "welcome";
     }
 
-    @RequestMapping(value ={"/Search/{key}","/TimKiem/{key}"},method = RequestMethod.GET)
+    @RequestMapping(value = {"/Search/{key}", "/TimKiem/{key}"}, method = RequestMethod.GET)
     public String Search(Map<String, Object> model) {
 
         model.put("message", this.message);

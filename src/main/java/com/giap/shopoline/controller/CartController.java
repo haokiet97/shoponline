@@ -35,20 +35,20 @@ public class CartController {
         return "redirect:Index";
     }
 
-    @RequestMapping(value = {"/addItem/{id}","/ThemSanPham/{id}"},method = RequestMethod.GET)
-    public String AddItem(){
+    @RequestMapping(value = {"/addItem/{id}", "/ThemSanPham/{id}"}, method = RequestMethod.GET)
+    public String AddItem() {
 
         return "redirect:Index";
     }
 
-    @RequestMapping(value = {"/Payment","/ThanhToan"},method = RequestMethod.GET)
-    public String viewPayment(){
+    @RequestMapping(value = {"/Payment", "/ThanhToan"}, method = RequestMethod.GET)
+    public String viewPayment() {
 
         return "payment";
     }
 
-    @RequestMapping(value = {"/Payment","/ThanhToan"},method = RequestMethod.POST)
-    public String Payment(){
+    @RequestMapping(value = {"/Payment", "/ThanhToan"}, method = RequestMethod.POST)
+    public String Payment() {
 
         return "redirect:Index";
     }

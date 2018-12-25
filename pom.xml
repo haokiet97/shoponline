@@ -23,16 +23,51 @@
 
     <dependencies>
 
+        <!--<dependency>-->
+        <!--<groupId>mysql</groupId>-->
+        <!--<artifactId>mysql-connector-java</artifactId>-->
+        <!--<version>5.1.47</version>-->
+        <!--</dependency>-->
+        <dependency>
+            <groupId>com.microsoft.sqlserver</groupId>
+            <artifactId>mssql-jdbc</artifactId>
+            <version>6.1.0.jre8</version>
+        </dependency>
+
+        <!-- Hibernate -->
+        <!-- http://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>5.1.0.Final</version>
+        </dependency>
+
+        <!-- http://mvnrepository.com/artifact/org.hibernate/hibernate-entitymanager -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-entitymanager</artifactId>
+            <version>5.1.0.Final</version>
+        </dependency>
+
+
+        <!-- http://mvnrepository.com/artifact/org.hibernate/hibernate-c3p0 -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-c3p0</artifactId>
+            <version>5.1.0.Final</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate</artifactId>
+            <version>3.2.6.ga</version>
+        </dependency>
+
         <!-- This is a web application -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-        <!-- This is a  thymeleaf config -->
-        <!--<dependency>-->
-        <!--<groupId>org.springframework.boot</groupId>-->
-        <!--<artifactId>spring-boot-starter-thymeleaf</artifactId>-->
-        <!--</dependency>-->
 
         <!-- Tomcat embedded container-->
         <dependency>
@@ -69,62 +104,19 @@
             <artifactId>bootstrap</artifactId>
             <version>3.3.7</version>
         </dependency>
-        <!--apache tiles 3.0.8-->
+
         <dependency>
             <groupId>org.apache.tiles</groupId>
-            <artifactId>tiles-extras</artifactId>
+            <artifactId>tiles-jsp</artifactId>
             <version>3.0.8</version>
         </dependency>
 
-        <!--<dependency>-->
-        <!--<groupId>org.hibernate</groupId>-->
-        <!--<artifactId>hibernate-core</artifactId>-->
-        <!--<version>4.3.6.Final</version>-->
-        <!--</dependency>-->
-
-
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-core</artifactId>
-            <version>5.1.0.Final</version>
-        </dependency>
-
-        <!-- http://mvnrepository.com/artifact/org.hibernate/hibernate-entitymanager -->
-
-
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-entitymanager</artifactId>
-            <version>5.1.0.Final</version>
-        </dependency>
-
-        <!-- http://mvnrepository.com/artifact/org.hibernate/hibernate-c3p0 -->
-
-
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-c3p0</artifactId>
-            <version>5.1.0.Final</version>
-        </dependency>
-
-        <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate -->
-
 
         <!--<dependency>-->
-        <!--<groupId>org.hibernate</groupId>-->
-        <!--<artifactId>hibernate</artifactId>-->
-        <!--<version>3.2.6.ga</version>-->
+        <!--<groupId>org.springframework.boot</groupId>-->
+        <!--<artifactId>spring-boot-starter-test</artifactId>-->
+        <!--<scope>test</scope>-->
         <!--</dependency>-->
-        <dependency>
-            <groupId>com.microsoft.sqlserver</groupId>
-            <artifactId>mssql-jdbc</artifactId>
-            <version>6.1.0.jre8</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot</artifactId>
-            <version>1.4.2.RELEASE</version>
-        </dependency>
 
 
     </dependencies>

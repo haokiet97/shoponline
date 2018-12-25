@@ -39,15 +39,18 @@
                     <td class="cart_quantity">
                         <div class="cart_quantity_button">
                             <a class="cart_quantity_up" href="/Cart/AddItems?id=@item.sanpham.id&count=1"> + </a>
-                            <input class="cart_quantity_input" name="quantity" value=@item.soluong autocomplete="off" size="2" type="text">
+                            <input class="cart_quantity_input" name="quantity" value=@item.soluong autocomplete="off"
+                                   size="2" type="text">
                             <a class="cart_quantity_down" href="/Cart/AddItems?id=@item.sanpham.id&count=-1"> - </a>
                         </div>
                     </td>
                     <td class="cart_total">
-                        <p class="cart_total_price">@((item.sanpham.gia.GetValueOrDefault() * item.soluong).ToString("N0")) VNĐ</p>
+                        <p class="cart_total_price">@((item.sanpham.gia.GetValueOrDefault() *
+                            item.soluong).ToString("N0")) VNĐ</p>
                     </td>
                     <td class="cart_delete">
-                        <a class="cart_quantity_delete" href="/Cart/Delete/@item.sanpham.id"><i class="fa fa-times">Xóa</i></a>
+                        <a class="cart_quantity_delete" href="/Cart/Delete/@item.sanpham.id"><i
+                                class="fa fa-times">Xóa</i></a>
                     </td>
                 </tr>
                 @*@_sosanpham = _sosanpham+ item.soluong;

@@ -2,7 +2,7 @@
 <html lang="en">
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles"%>
+<%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 
 <head>
@@ -125,7 +125,8 @@
                 <div class="col-sm-3">
                     <form action="/Home/Search" method="get" class="searchform">
                         <input name="key" placeholder="Từ Khóa" type="text">
-                        <button type="submit" class="btn btn-default"><img src="/images/layout/searchicon.png"/></button>
+                        <button type="submit" class="btn btn-default"><img src="/images/layout/searchicon.png"/>
+                        </button>
 
                     </form>
                 </div>
@@ -134,7 +135,7 @@
     </div><!--/header-bottom-->
 </header><!--/header-->
 <%--render body--%>
-<tiles:insertAttribute name="content" />
+<tiles:insertAttribute name="content"/>
 
 <br/>
 <br/>

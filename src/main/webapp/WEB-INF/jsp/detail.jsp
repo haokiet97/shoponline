@@ -124,7 +124,8 @@
                 <div class="col-sm-3">
                     <form action="/Home/Search" method="get" class="searchform">
                         <input name="key" placeholder="Từ Khóa" type="text">
-                        <button type="submit" class="btn btn-default"><img src="/images/layout/searchicon.png"/></button>
+                        <button type="submit" class="btn btn-default"><img src="/images/layout/searchicon.png"/>
+                        </button>
 
                     </form>
                 </div>
@@ -136,7 +137,7 @@
 
 <%--section--%>
 <section class="container">
-    <br />
+    <br/>
     <div class="row">
 
         <div class="product-details">
@@ -163,7 +164,8 @@
                             Thêm giỏ hàng
                         </button>
                     </span>
-                    <p><b>Số lượng:</b> @(item.soluong.GetValueOrDefault() > 0 ? "Có " + item.soluong.Value.ToString() + " sản phẩm." : "Tạm hết hàng.")</p>
+                    <p><b>Số lượng:</b> @(item.soluong.GetValueOrDefault() > 0 ? "Có " + item.soluong.Value.ToString() +
+                        " sản phẩm." : "Tạm hết hàng.")</p>
                     <p><b>Tình trạng:</b>Mới</p>
                     <p><b>Brand:</b> GT-mobile</p>
                     @*<a href=""><img src="images/product-details/share.png" class="share img-responsive" alt=""></a>*@
@@ -183,7 +185,7 @@
                 <div class="tab-pane active fade in" id="details">
                     <div class="row">
                         <h3>--Thông Số Kỹ Thuật</h3>
-                        <hr />
+                        <hr/>
                         <div class="col-sm-10">
                             <table class="table table-bordered table-striped table-hover">
                                 <tr>
@@ -208,7 +210,9 @@
                                 </tr>
                                 <tr>
                                     <th>Camera</th>
-                                    <td>Trước: @item.camera_truoc.GetValueOrDefault() mpx, Sau: @item.camera_sau.GetValueOrDefault()</td>
+                                    <td>Trước: @item.camera_truoc.GetValueOrDefault() mpx, Sau:
+                                        @item.camera_sau.GetValueOrDefault()
+                                    </td>
                                 <tr>
                                     <th>Màn Hình</th>
                                     <td>@item.manhinh.GetValueOrDefault() Inc</td>
@@ -224,13 +228,13 @@
                 </div>
 
 
-
                 <div class="tab-pane fade" id="reviews">
                     <div class="col-sm-12">
                         <ul>
                             <li><a href=""><i class="fa fa-user"></i>EUGEN</a></li>
                             <li><a href=""><i class="fa fa-clock-o"></i>@DateTime.Now.ToShortTimeString()</a></li>
-                            <li><a href=""><i class="fa fa-calendar-o"></i>@DateTime.Now.Date.ToShortDateString()</a></li>
+                            <li><a href=""><i class="fa fa-calendar-o"></i>@DateTime.Now.Date.ToShortDateString()</a>
+                            </li>
                         </ul>
                         <p><b>Bình Luận</b></p>
 
@@ -264,10 +268,11 @@
                             <div class="product-image-wrapper">
                                 <div class="single-products">
                                     <div class="productinfo text-center">
-                                        <img src="@r_item.link_anh" alt=""  height="260">
+                                        <img src="@r_item.link_anh" alt="" height="260">
                                         <h2>@r_item.gia.GetValueOrDefault().ToString("N0") Đ</h2>
                                         <p>@r_item.ten</p>
-                                        <a  class="btn btn-default add-to-cart"  href="/Cart/AddItem/@item.id"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                        <a class="btn btn-default add-to-cart" href="/Cart/AddItem/@item.id"><i
+                                                class="fa fa-shopping-cart"></i>Add to cart</a>
                                     </div>
                                 </div>
                             </div>
@@ -286,7 +291,8 @@
                                         <img src="@r_item.link_anh" alt="" height="260">
                                         <h2>@r_item.gia.GetValueOrDefault().ToString("N0") Đ</h2>
                                         <p>@r_item.ten</p>
-                                        <a class="btn btn-default add-to-cart" href="/Cart/AddItem/@item.id"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                        <a class="btn btn-default add-to-cart" href="/Cart/AddItem/@item.id"><i
+                                                class="fa fa-shopping-cart"></i>Add to cart</a>
                                     </div>
                                 </div>
                             </div>
@@ -308,7 +314,7 @@
             function additem() {
                 var count = $('#num-of-product').val();
                 if (count > 0) {
-                    var ulr = "/Cart/AddItems/?id=" +@item.id.ToString() +'&' + "count=" + count;
+                    var ulr = "/Cart/AddItems/?id=" +@item.id.ToString() + '&' + "count=" + count;
                     window.location.href = ulr;
                 }
             }

@@ -1,22 +1,23 @@
-<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
 <tiles-definitions>
     <definition name="baselayout" template="/WEB-INF/jsp/layout.jsp">
-        <put-attribute name="content" value="" />
+        <put-attribute name="content" value=""/>
     </definition>
     <definition name="home" extends="baselayout">
-        <put-attribute name="content" value="index" />
+        <put-attribute name="content" value="index"/>
     </definition>
     <definition name="cart" extends="baselayout">
-        <put-attribute name="content" value="/WEB-INF/jsp/cart.jsp" />
+        <put-attribute name="content" value="/WEB-INF/jsp/cart.jsp"/>
     </definition>
     <definition name="payment" extends="baselayout">
-        <put-attribute name="content" value="/WEB-INF/jsp/payment.jsp" />
+        <put-attribute name="content" value="/WEB-INF/jsp/payment.jsp"/>
     </definition>
     <definition name="notice" extends="baselayout">
-        <put-attribute name="content" value="/WEB-INF/jsp/notice.jsp" />
+        <put-attribute name="content" value="/WEB-INF/jsp/notice.jsp"/>
     </definition>
     <definition name="index" template="/WEB-INF/jsp/index.jsp">
-        <put-attribute name="category" value="/WEB-INF/jsp/_category.jsp" />
+        <put-attribute name="category" value="/WEB-INF/jsp/_category.jsp"/>
     </definition>
     <definition name="products" template="/WEB-INF/jsp/products.jsp">
         <put-attribute name="category" value="/WEB-INF/jsp/_category.jsp"/>

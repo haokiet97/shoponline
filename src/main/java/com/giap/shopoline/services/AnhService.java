@@ -2,11 +2,14 @@ package com.giap.shopoline.services;
 
 import com.giap.shopoline.dao.AnhDao;
 import com.giap.shopoline.models.TblAnhEntity;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+
 @Service
 public class AnhService {
+    @Autowired
     private static AnhDao Anhdao;
 
     public AnhService() {

@@ -45,12 +45,14 @@
                         <td class="cart_quantity">
                             <div class="cart_quantity_button">
                                 <a class="cart_quantity_up" href="/Cart/AddItems?id=@item.sanpham.id&count=1"> + </a>
-                                <input class="cart_quantity_input" name="quantity" value=@item.soluong autocomplete="off" size="2" type="text">
+                                <input class="cart_quantity_input" name="quantity" value=@item.soluong
+                                       autocomplete="off" size="2" type="text">
                                 <a class="cart_quantity_down" href="/Cart/AddItems?id=@item.sanpham.id&count=-1"> - </a>
                             </div>
                         </td>
                         <td class="cart_total">
-                            <p class="cart_total_price">@((item.sanpham.gia.GetValueOrDefault() * item.soluong).ToString("N0")) VNĐ</p>
+                            <p class="cart_total_price">@((item.sanpham.gia.GetValueOrDefault() *
+                                item.soluong).ToString("N0")) VNĐ</p>
                         </td>
                         <td class="cart_delete">
                             <a class="cart_quantity_delete" href="/Cart/Delete/@item.sanpham.id"><i class="fa fa-times">Xóa</i></a>
@@ -75,7 +77,6 @@
         </div>
 
 
-
         <div class="register-req">
             <p>Vui lòng nhập đủ thông tin để được xác thực nhanh chóng. Xin cảm ơn quý khách!</p>
         </div><!--/register-req-->
@@ -89,13 +90,15 @@
                             <p>Thông tin khách hàng</p>
 
                             <input name="Name" type="text" placeholder="Họ Tên" required>
-                            <input name="PhoneNumber" type="text" placeholder="Số điện thoại" id="PhoneNumber" onkeypress="return isNumberKey(event)" maxlength="13" required>
+                            <input name="PhoneNumber" type="text" placeholder="Số điện thoại" id="PhoneNumber"
+                                   onkeypress="return isNumberKey(event)" maxlength="13" required>
                             <input name="Email" type="email" placeholder="E-mail">
                             <input name="Address" type="text" placeholder="Địa chỉ">
                             <input name="Address1" type="text" placeholder="Nơi Nhận Hàng" required>
                             <div class="order-message">
                                 <p>Ghi chú</p>
-                                <textarea name="Note" placeholder="Ghi một vài chi chú cho đơn hàng." rows="6"></textarea>
+                                <textarea name="Note" placeholder="Ghi một vài chi chú cho đơn hàng."
+                                          rows="6"></textarea>
                             </div>
                             <div>
                                 <button type="submit" class="btn btn-primary">Đặt Hàng</button>
@@ -115,10 +118,10 @@
                 </div>
 
 
-
             </div>
         </div>
 
 
     </div>
-</section> <!--/#cart_items-->
+</section>
+<!--/#cart_items-->

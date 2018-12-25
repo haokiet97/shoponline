@@ -6,10 +6,11 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-
+@Repository
 public class AnhDao {
     private Session currentSession;
     private Transaction currentTransaction;
@@ -38,7 +39,7 @@ public class AnhDao {
     }
 
     private static SessionFactory getSessionFactory() {
-        Configuration configuration = new Configuration().configure();
+        Configuration configuration = new Configuration().configure("/hibernate.cfg.xml");
         StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder()
                 .applySettings(configuration.getProperties());
         SessionFactory sessionFactory = configuration.buildSessionFactory(builder.build());
@@ -80,7 +81,7 @@ public class AnhDao {
 
     @SuppressWarnings("unchecked")
     public List<TblAnhEntity> findAll() {
-        List<TblAnhEntity> TblAnhEntitys = (List<TblAnhEntity>) this.getCurrentSession().createQuery("from TblAnhEntity").list();
+        List<TblAnhEntity> TblAnhEntitys = (List<TblAnhEntity>) this.getCurrentSession().createNativeQuery("SELECT * from tbl_anh").list();
         return TblAnhEntitys;
     }
 
