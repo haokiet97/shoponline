@@ -105,7 +105,7 @@ public class TblAlbumAnhEntity {
     }
 
     @ManyToOne
-    @JoinColumn(name = "id_sanpham", referencedColumnName = "id")
+    @JoinColumn(name = "id_sanpham", referencedColumnName = "id", insertable = false, updatable = false)
     public TblSanphamEntity getTblSanphamByIdSanpham() {
         return tblSanphamByIdSanpham;
     }

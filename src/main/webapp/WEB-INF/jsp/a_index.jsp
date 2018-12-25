@@ -1,10 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
+<%@ page import="com.giap.shopoline.models.TblAnhEntity" %>
+<%@ page import="java.util.List" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
@@ -137,11 +138,10 @@
 </header><!--/header-->
 <%--render body--%>
 <tiles:insertAttribute name="content"/>
-<%--<%--%>
-<%--for (TblAnhEntity item: data){--%>
-<%--item.getLink();--%>
-<%--}--%>
-<%--%>--%>
+
+<c:forEach items="${data}" var="anh">
+    <h4>${anh.link}</h4>
+</c:forEach>
 
 <br/>
 <br/>

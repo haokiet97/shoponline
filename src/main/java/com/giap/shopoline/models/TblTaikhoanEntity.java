@@ -94,7 +94,7 @@ public class TblTaikhoanEntity {
     }
 
     @ManyToOne
-    @JoinColumn(name = "id_quyen", referencedColumnName = "id")
+    @JoinColumn(name = "id_quyen", referencedColumnName = "id", insertable = false, updatable = false)
     public TblQuyenEntity getTblQuyenByIdQuyen() {
         return tblQuyenByIdQuyen;
     }
@@ -104,7 +104,7 @@ public class TblTaikhoanEntity {
     }
 
     @ManyToOne
-    @JoinColumn(name = "id_nhanvien", referencedColumnName = "id")
+    @JoinColumn(name = "id_nhanvien", referencedColumnName = "id", insertable = false, updatable = false)
     public TblNhanvienEntity getTblNhanvienByIdNhanvien() {
         return tblNhanvienByIdNhanvien;
     }

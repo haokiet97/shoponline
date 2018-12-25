@@ -4,7 +4,6 @@ import com.giap.shopoline.models.TblAnhEntity;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
-import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.springframework.stereotype.Repository;
 
@@ -40,9 +39,10 @@ public class AnhDao {
 
     private static SessionFactory getSessionFactory() {
         Configuration configuration = new Configuration().configure("/hibernate.cfg.xml");
-        StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder()
-                .applySettings(configuration.getProperties());
-        SessionFactory sessionFactory = configuration.buildSessionFactory(builder.build());
+//        StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder()
+//                .applySettings(configuration.getProperties());
+        SessionFactory sessionFactory = configuration.buildSessionFactory();
+        //SessionFactory sessionFactory = configuration.buildSessionFactory(builder.build());
         return sessionFactory;
     }
 
@@ -81,7 +81,7 @@ public class AnhDao {
 
     @SuppressWarnings("unchecked")
     public List<TblAnhEntity> findAll() {
-        List<TblAnhEntity> TblAnhEntitys = (List<TblAnhEntity>) this.getCurrentSession().createNativeQuery("SELECT * from tbl_anh").list();
+        List<TblAnhEntity> TblAnhEntitys = (List<TblAnhEntity>) getCurrentSession().createQuery("from TblAnhEntity").list();
         return TblAnhEntitys;
     }
 

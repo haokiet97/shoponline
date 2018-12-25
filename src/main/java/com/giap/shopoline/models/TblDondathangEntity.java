@@ -119,9 +119,6 @@ public class TblDondathangEntity {
 
     @ManyToOne
     @JoinColumn(name = "id_khachhang", referencedColumnName = "id", insertable = false, updatable = false)
-
-//    chỗ nào manytoone thì thêm cái ý vòa
-
     public TblKhachhangEntity getTblKhachhangByIdKhachhang() {
         return tblKhachhangByIdKhachhang;
     }
@@ -131,7 +128,7 @@ public class TblDondathangEntity {
     }
 
     @ManyToOne
-    @JoinColumn(name = "id_nhanvien", referencedColumnName = "id")
+    @JoinColumn(name = "id_nhanvien", referencedColumnName = "id", insertable = false, updatable = false)
     public TblNhanvienEntity getTblNhanvienByIdNhanvien() {
         return tblNhanvienByIdNhanvien;
     }

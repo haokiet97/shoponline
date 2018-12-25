@@ -70,7 +70,7 @@ public class TblBinhluanEntity {
     }
 
     @ManyToOne
-    @JoinColumn(name = "id_khachhang", referencedColumnName = "id")
+    @JoinColumn(name = "id_khachhang", referencedColumnName = "id", insertable = false, updatable = false)
     public TblKhachhangEntity getTblKhachhangByIdKhachhang() {
         return tblKhachhangByIdKhachhang;
     }
@@ -80,7 +80,7 @@ public class TblBinhluanEntity {
     }
 
     @ManyToOne
-    @JoinColumn(name = "id_sanpham", referencedColumnName = "id")
+    @JoinColumn(name = "id_sanpham", referencedColumnName = "id", insertable = false, updatable = false)
     public TblSanphamEntity getTblSanphamByIdSanpham() {
         return tblSanphamByIdSanpham;
     }

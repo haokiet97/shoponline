@@ -71,7 +71,7 @@ public class TblChitietdonhangEntity {
     }
 
     @ManyToOne
-    @JoinColumn(name = "id_dondathang", referencedColumnName = "id", nullable = false)
+    @JoinColumn(name = "id_dondathang", referencedColumnName = "id", nullable = false, insertable = false, updatable = false)
     public TblDondathangEntity getTblDondathangByIdDondathang() {
         return tblDondathangByIdDondathang;
     }
@@ -81,7 +81,7 @@ public class TblChitietdonhangEntity {
     }
 
     @ManyToOne
-    @JoinColumn(name = "id_sanpham", referencedColumnName = "id", nullable = false)
+    @JoinColumn(name = "id_sanpham", referencedColumnName = "id", nullable = false, insertable = false, updatable = false)
     public TblSanphamEntity getTblSanphamByIdSanpham() {
         return tblSanphamByIdSanpham;
     }

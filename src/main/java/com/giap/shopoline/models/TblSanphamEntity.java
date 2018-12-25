@@ -279,7 +279,7 @@ public class TblSanphamEntity {
     }
 
     @ManyToOne
-    @JoinColumn(name = "id_danhmuc", referencedColumnName = "id")
+    @JoinColumn(name = "id_danhmuc", referencedColumnName = "id", insertable = false, updatable = false)
     public TblDanhmucEntity getTblDanhmucByIdDanhmuc() {
         return tblDanhmucByIdDanhmuc;
     }
@@ -289,7 +289,7 @@ public class TblSanphamEntity {
     }
 
     @ManyToOne
-    @JoinColumn(name = "id_nhasanxuat", referencedColumnName = "id")
+    @JoinColumn(name = "id_nhasanxuat", referencedColumnName = "id", insertable = false, updatable = false)
     public TblNhasanxuatEntity getTblNhasanxuatByIdNhasanxuat() {
         return tblNhasanxuatByIdNhasanxuat;
     }
