@@ -113,7 +113,7 @@
                                     <a href="/Cart/addItem/${item.id}" class="btn btn-default add-to-cart"><i
                                             class="fa fa-shopping-cart"></i>Thêm vào giỏ hàng</a>
                                 </div>
-                                <a href="/Details/${item.id}">
+                                <a href="/Detail/${item.id}">
                                     <div class="product-overlay">
                                         <div class="overlay-content">
                                             <p>${item.ten}</p>
@@ -124,7 +124,7 @@
                                             <p>Camera: ${item.getCameraSau()} megapixels</p>
                                             <p>Selfie: ${item.getCameraTruoc()} megapixels</p>
                                             <p>Pin: ${item.getPin()} mAh</p>
-                                            <a href="/Cart/AddItem/${item.id}" class="btn btn-default add-to-cart"><i
+                                            <a href="/Cart/addItem/${item.id}" class="btn btn-default add-to-cart"><i
                                                     class="fa fa-shopping-cart"></i>Thêm vào giỏ hàng</a>
 
                                         </div>
@@ -185,7 +185,7 @@
                                             <h2>@(item.gia.GetValueOrDefault() > 0 ?
                                                 item.gia.GetValueOrDefault().ToString("N0") + " Đ" : "Liên Hệ")</h2>
                                             <p>@item.ten</p>
-                                            <a href="/Cart/AddItem/@item.id" class="btn btn-default add-to-cart"><i
+                                            <a href="/Cart/addItem/@item.id" class="btn btn-default add-to-cart"><i
                                                     class="fa fa-shopping-cart"></i>Thêm giỏ hàng</a>
                                         </div>
 
@@ -209,7 +209,7 @@
                                             <h2>@(item.gia.GetValueOrDefault() > 0 ?
                                                 item.gia.GetValueOrDefault().ToString("N0") + " Đ" : "Liên Hệ")</h2>
                                             <p>@item.ten</p>
-                                            <a href="/Cart/AddItem/@item.id" class="btn btn-default add-to-cart"><i
+                                            <a href="/Cart/addItem/@item.id" class="btn btn-default add-to-cart"><i
                                                     class="fa fa-shopping-cart"></i>Thêm giỏ hàng</a>
                                         </div>
 

@@ -145,7 +145,8 @@
             <!--product-details-->
             <div class="col-sm-4">
                 <div class="view-product">
-                    <img src="@Model.link_anh" alt="Product.png" width="160">
+                    <img src="https://didongthongminh.vn/upload_images/2018/11/Xiaomi-Mi-Mix-3-Xanh-Ng%E1%BB%8Dc-b%C3%ADch.png"
+                         alt="Product.png" width="160">
 
                 </div>
             </div>

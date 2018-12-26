@@ -36,7 +36,7 @@
                                     <p>Camera: ${sp.getCameraSau()} megapixels</p>
                                     <p>Selfie: ${sp.getCameraTruoc()} megapixels</p>
                                     <p>Pin: ${sp.getPin()} mAh</p>
-                                    <a href="/Cart/AddItem/${sp.getId()}" class="btn btn-default add-to-cart"><i
+                                    <a href="/Cart/addItem/${sp.getId()}" class="btn btn-default add-to-cart"><i
                                             class="fa fa-shopping-cart"></i>Thêm vào giỏ hàng</a>
                                 </div>
                             </div>

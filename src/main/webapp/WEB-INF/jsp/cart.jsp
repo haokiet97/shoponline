@@ -51,11 +51,11 @@
                     </td>
                     <td class="cart_quantity">
                         <div class="cart_quantity_button">
-                            <a class="cart_quantity_up" href="/Cart/AddItems/<%=item.getSanPham().getId()%>/1"> + </a>
+                            <a class="cart_quantity_up" href="/Cart/addItems/<%=item.getSanPham().getId()%>/1"> + </a>
                             <input class="cart_quantity_input" name="quantity"
                                    value=<%=item.getCount()%> autocomplete="off"
                                    size="2" type="text">
-                            <a class="cart_quantity_down" href="/Cart/AddItems/<%=item.getSanPham().getId()%>/-1">
+                            <a class="cart_quantity_down" href="/Cart/addItems/<%=item.getSanPham().getId()%>/-1">
                                 - </a>
                         </div>
                     </td>
@@ -85,7 +85,7 @@
                         <li>Tổng Tiền: <span><%=java.text.NumberFormat.getInstance().format(tongtien)%> VNĐ</span></li>
                     </ul>
                     <a class="btn btn-default check_out" href="/Cart/Payment">Đặt Hàng</a>
-                    <a class="btn btn-default update" href="/Cart/DeleteAll">Xóa Giỏ Hàng</a>
+                    <a class="btn btn-default update" href="/Cart/deleteAll">Xóa Giỏ Hàng</a>
                 </div>
             </div>
         </div>

@@ -1,9 +1,24 @@
+<%@ page import="com.giap.shopoline.models.CartItem" %>
+<%@ page import="java.util.List" %>
 <!DOCTYPE html>
 <html lang="en">
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+
+<%
+    List<CartItem> items = (List<CartItem>) session.getAttribute("items");
+    int sosanpham = 0;
+    long tongtien = 0;
+    if (items != null) {
+        for (CartItem item : items) {
+            sosanpham += 1;
+
+        }
+    }
+%>
+
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -86,7 +101,7 @@
                             <li><a href=""><i class="fa fa-star"></i> Yêu Thích</a></li>
                             <li><a href=""><i class="fa fa-crosshairs"></i> Checkout</a></li>
                             <li><a href="/Cart/"><i class="fa fa-shopping-cart"></i> Giỏ
-                                Hàng(@_count.ToString())</a></li>
+                                Hàng(<%=sosanpham%>)</a></li>
                             <li><a href="/Admin/Login/Login"><i class="fa fa-lock"></i>Đăng Nhập</a></li>
                         </ul>
                     </div>

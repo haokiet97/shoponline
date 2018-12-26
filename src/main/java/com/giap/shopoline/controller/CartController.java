@@ -37,10 +37,12 @@ public class CartController {
         return "cart";
     }
 
-    @RequestMapping(value = {"/delete", "/XoaTatCa"}, method = RequestMethod.GET)
+    @RequestMapping(value = {"/deleteAll", "/XoaTatCa"}, method = RequestMethod.GET)
     public String DeleteAll() {
-
-        return "redirect:Index";
+        HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
+        HttpSession session = request.getSession(true);//true will create if necessary
+        session.setAttribute("items", null);
+        return "redirect:cart";
     }
 
     @RequestMapping(value = {"/deleteProduct/{id}", "/XoaSanPham/{id}"}, method = RequestMethod.GET)
