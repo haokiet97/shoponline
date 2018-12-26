@@ -23,7 +23,7 @@
                                 <p>${sp.getTen()}</p>
                                 <h2>${sp.getGia()} VNĐ</h2>
 
-                                <a href="/Cart/AddItem/${sp.getId()}" class="btn btn-default add-to-cart"><i
+                                <a href="/Cart/addItem/${sp.getId()}" class="btn btn-default add-to-cart"><i
                                         class="fa fa-shopping-cart"></i>Thêm vào giỏ hàng</a>
                             </div>
                             <div class="product-overlay">

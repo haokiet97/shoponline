@@ -110,7 +110,7 @@
                                     <p>${item.ten}</p>
                                     <h2>${item.gia} VNĐ</h2>
 
-                                    <a href="/Cart/AddItem/${item.id}" class="btn btn-default add-to-cart"><i
+                                    <a href="/Cart/addItem/${item.id}" class="btn btn-default add-to-cart"><i
                                             class="fa fa-shopping-cart"></i>Thêm vào giỏ hàng</a>
                                 </div>
                                 <a href="/Details/${item.id}">

@@ -112,13 +112,13 @@
                     <div class="mainmenu pull-left">
                         <ul class="nav navbar-nav collapse navbar-collapse">
                             <li><a href="/">Trang Chủ</a></li>
-                            <li><a href="/Home/Category/?CategoryID=1">Điện Thoại</a></li>
-                            <li><a href="/Home/Category/?CategoryID=2">Tablet</a></li>
-                            <li><a href="/Home/Producer/?ProducerID=2">Iphone</a></li>
-                            <li><a href="/Home/Producer/?ProducerID=1">Samsung</a></li>
-                            <li><a href="/Home/Category/?CategoryID=3">Phụ Kiện</a></li>
-                            <li><a href="/Home/Category/?CategoryID=4">Sửa Chữa</a></li>
-                            <li><a href="/Home/Category/?CategoryID=5">Khuyến Mại</a></li>
+                            <li><a href="/Category/1">Điện Thoại</a></li>
+                            <li><a href="/Category/2">Tablet</a></li>
+                            <li><a href="/Producer/1">Iphone</a></li>
+                            <li><a href="/Producer/2">Samsung</a></li>
+                            <li><a href="/Category/3">Phụ Kiện</a></li>
+                            <li><a href="/Category/4">Sửa Chữa</a></li>
+                            <li><a href="/Category/5">Khuyến Mại</a></li>
                         </ul>
                     </div>
                 </div>
@@ -270,7 +270,7 @@
                                         <img src="@r_item.link_anh" alt="" height="260">
                                         <h2>${java.text.NumberFormat.getInstance().format(lst.getGia())} Đ</h2>
                                         <p>${lst.getTen()}</p>
-                                        <a class="btn btn-default add-to-cart" href="/Cart/AddItem/${lst.getId()}"><i
+                                        <a class="btn btn-default add-to-cart" href="/Cart/addItem/${lst.getId()}"><i
                                                 class="fa fa-shopping-cart"></i>Add to cart</a>
                                     </div>
                                 </div>
@@ -290,7 +290,7 @@
                                             <h2>${java.text.NumberFormat.getInstance().format(lst.getGia())} Đ</h2>
                                             <p>${lst.getTen()}</p>
                                             <a class="btn btn-default add-to-cart"
-                                               href="/Cart/AddItem/${lst.getId()}"><i
+                                               href="/Cart/addItem/${lst.getId()}"><i
                                                     class="fa fa-shopping-cart"></i>Add to cart</a>
                                         </div>
                                     </div>
@@ -313,7 +313,7 @@
             function additem() {
                 var count = $('#num-of-product').val();
                 if (count > 0) {
-                    var ulr = "/Cart/AddItems/?id=" + ${sanpham.getId()} +'&' + "count=" + count;
+                    var ulr = "/Cart/addItems/" + ${sanpham.getId()} +'/' + count;
                     window.location.href = ulr;
                 }
             }
