@@ -64,7 +64,7 @@
                             VND</p>
                     </td>
                     <td class="cart_delete">
-                        <a class="cart_quantity_delete" href="/Cart/Delete/<%=item.getSanPham().getId()%>"><i
+                        <a class="cart_quantity_delete" href="/Cart/deleteProduct/<%=item.getSanPham().getId()%>"><i
                                 class="fa fa-times">Xóa</i></a>
                     </td>
                 </tr>

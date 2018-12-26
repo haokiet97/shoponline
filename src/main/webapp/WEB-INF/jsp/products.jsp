@@ -18,7 +18,8 @@
                         <div class="single-products">
                             <div class="productinfo text-center">
 
-                                <img src="@item.link_anh" alt="${sp.getTen()}" style="display: inline; opacity: 1;"
+                                <img src="https://didongthongminh.vn/upload_images/2018/11/Xiaomi-Mi-Mix-3-Xanh-Ng%E1%BB%8Dc-b%C3%ADch.png"
+                                     alt="${sp.getTen()}" style="display: inline; opacity: 1;"
                                      width="180" height="300">
                                 <p>${sp.getTen()}</p>
                                 <h2>${sp.getGia()} VNĐ</h2>

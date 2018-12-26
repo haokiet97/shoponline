@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
-import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -27,7 +26,12 @@ public class CartController {
     public String Index(Map<String, Object> model) {
         HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
         HttpSession session = request.getSession(true);//true will create if necessary
-        if (session.getAttribute("items") == null) {
+        List<CartItem> cart = (List<CartItem>) session.getAttribute("items");
+
+        if (cart == null) {
+            model.put("notice", "Thông Báo");
+            return "notice";
+        } else if (cart.size() == 0) {
             model.put("notice", "Thông Báo");
             return "notice";
         }
@@ -42,13 +46,29 @@ public class CartController {
         HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
         HttpSession session = request.getSession(true);//true will create if necessary
         session.setAttribute("items", null);
-        return "redirect:cart";
+        return "redirect:/Cart";
     }
 
     @RequestMapping(value = {"/deleteProduct/{id}", "/XoaSanPham/{id}"}, method = RequestMethod.GET)
-    public String DeleteProduct() {
+    public String DeleteProduct(@PathVariable("id") int id) {
+        HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
+        HttpSession session = request.getSession(true);//true will create if necessary
 
-        return "redirect:Index";
+        TblSanphamEntity sanpham = new SanphamService().findById(id);
+        List<CartItem> cart = (List<CartItem>) session.getAttribute("items");
+        if (cart != null) {
+            List<CartItem> list = (List<CartItem>) cart;
+            for (CartItem item : list) {
+                if (item.getSanPham().equals(sanpham)) {
+                    list.remove(item);
+                    session.setAttribute("items", list);
+                    return "redirect:/Cart";
+                }
+            }
+
+        }
+
+        return "redirect:/Cart";
     }
 
     @RequestMapping(value = {"/addItems/{id}/{count}", "/ThemSanPham/{id}/{count}"}, method = RequestMethod.GET)
@@ -74,7 +94,7 @@ public class CartController {
                         if (list.size() == 0) {
                             session.setAttribute("items", null);
                         }
-                        return "cart";
+                        return "redirect:/Cart";
                     }
                 }
 
@@ -106,7 +126,7 @@ public class CartController {
         }
 
 
-        return "cart";
+        return "redirect:/Cart";
 
 
     }
@@ -152,7 +172,7 @@ public class CartController {
             session.setAttribute("items", list);
         }
 
-        return "cart";
+        return "redirect:/Cart";
 
     }
 

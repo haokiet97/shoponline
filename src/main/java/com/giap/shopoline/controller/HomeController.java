@@ -85,9 +85,17 @@ public class HomeController {
     }
 
     @RequestMapping(value = {"/Search/{key}", "/TimKiem/{key}"}, method = RequestMethod.GET)
-    public String Search(Map<String, Object> model) {
-
-        model.put("message", this.message);
-        return "search";
+    public String Search(Map<String, Object> model, @PathVariable("key") String key) {
+        List<TblSanphamEntity> lst = new SanphamService().findAll();
+        List<TblSanphamEntity> data = new ArrayList<TblSanphamEntity>();
+        for (TblSanphamEntity item : lst) {
+            if (item.getTblDanhmucByIdDanhmuc().getTen().indexOf(key) > 0) {
+                data.add(item);
+            }
+        }
+        model.put("lstsanpham", data);
+        model.put("danhmuc", new DanhmucService().findAll());
+        model.put("nhasanxuat", new NhasanxuatService().findAll());
+        return "products_in_category";
     }
 }

@@ -138,7 +138,7 @@
                     </div>
                 </div>
                 <div class="col-sm-3">
-                    <form action="/Home/Search" method="get" class="searchform">
+                    <form action="/Search" method="get" class="searchform">
                         <input name="key" placeholder="Từ Khóa" type="text">
                         <button type="submit" class="btn btn-default"><img src="/images/layout/searchicon.png"/>
                         </button>
